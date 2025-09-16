@@ -21,6 +21,7 @@ class EquipamentoViewSet(viewsets.ModelViewSet):
 
 
 class ManutencaoViewSet(viewsets.ModelViewSet):
+    queryset = Manutencao.objects.all()
     serializer_class = ManutencaoSerializer
 
     def get_queryset(self):
@@ -35,6 +36,7 @@ class ManutencaoViewSet(viewsets.ModelViewSet):
 
 
 class ServicoRealizadoViewSet(viewsets.ModelViewSet):
+    queryset = ServicoRealizado.objects.all()
     serializer_class = ServicoRealizadoSerializer
 
     def get_queryset(self):
