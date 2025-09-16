@@ -1,6 +1,13 @@
 from rest_framework import viewsets
 from .models import Viatura, Equipamento, Manutencao, ServicoRealizado
-from .serializers import ViaturaSerializer, EquipamentoSerializer, ManutencaoSerializer, ServicoRealizadoSerializer
+from .serializers import (
+    ViaturaSerializer,
+    EquipamentoSerializer,
+    ManutencaoSerializer,
+    ServicoRealizadoSerializer,
+    ItemEstoqueSerializer,
+)
+from inventory.models import ItemEstoque
 
 
 class ViaturaViewSet(viewsets.ModelViewSet):
@@ -39,3 +46,8 @@ class ServicoRealizadoViewSet(viewsets.ModelViewSet):
         if equipamento_id:
             queryset = queryset.filter(equipamento_id=equipamento_id)
         return queryset
+
+
+class ItemEstoqueViewSet(viewsets.ModelViewSet):
+    queryset = ItemEstoque.objects.all()
+    serializer_class = ItemEstoqueSerializer

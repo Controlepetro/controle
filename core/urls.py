@@ -8,6 +8,7 @@ router.register(r"viaturas", ViaturaViewSet)
 router.register(r"equipamentos", EquipamentoViewSet)
 router.register(r"manutencoes", ManutencaoViewSet)
 router.register(r"servicos", ServicoRealizadoViewSet)
+router.register(r"estoque", ItemEstoqueViewSet)
 
 urlpatterns = [
     path("admin/", admin.site.urls),
