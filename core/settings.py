@@ -31,7 +31,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'users',
     'fleet',
-    'inventory',
+    'inventory'
 ]
 
 MIDDLEWARE = [
